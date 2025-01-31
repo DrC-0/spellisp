@@ -1,1 +1,1 @@
-# purelizelisp
+# spellisp
