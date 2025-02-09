@@ -1,3 +1,4 @@
-mylang.py
-cmd.lark
 .venv
+.HOME
+.DS_Store
+output.png

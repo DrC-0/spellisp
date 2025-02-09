@@ -1,0 +1,26 @@
+start: code
+
+code: list+
+
+list: (quote | backquote)? "(" (atom | symbatom | list)* ")"
+
+atom: cname | number | operator | string
+symbatom : (comma | quote | colon ) atom | (comma_at | sharp_quote) cname
+operator: /(\+|\-|\*|\/=|\/|=|1\+|1\-)/
+
+quote: "'"
+backquote: "`"
+comma: ","
+comma_at: ",@"
+sharp_quote: "#'"
+colon   :":"
+
+cname: /[a-zA-Z_][a-zA-Z0-9-_]*/
+number: SIGNED_NUMBER
+string: ESCAPED_STRING
+
+
+%import common.SIGNED_NUMBER
+%import common.ESCAPED_STRING
+%import common.WS
+%ignore WS
