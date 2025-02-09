@@ -161,6 +161,6 @@ with open("floranteatlaura_base64.txt", "r") as file:
     font = file.read()[:-1]
 tree = Lark(spell_grammar).parse(test)
 svg = generate_svg(tree,font)
-with open("output.svg", "w") as f:
+with open("dst/output.svg", "w") as f:
     f.write(svg)
-svg2png(url="output.svg", write_to="output.png")
+svg2png(url="dst/output.svg", write_to="output.png")
