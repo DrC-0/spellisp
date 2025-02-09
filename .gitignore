@@ -1,4 +1,3 @@
 .venv
-.HOME
 .DS_Store
-output.png
+dst
